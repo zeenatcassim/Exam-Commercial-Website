@@ -1,3 +1,8 @@
+header{
+    padding-bottom: 50px;
+    background-color: rgb(170, 170, 168);
+}
+
 .main-one{
     background-color: rgb(220, 220, 220);
     text-align: center;
@@ -5,6 +10,110 @@
     padding-bottom: 50px;
 }
 
-.main-two{
-    
+.main-two-para{
+    padding-top: 20px;
+    text-align: center;
 }
+
+.main-two-display{
+    display: grid;
+    grid-template-columns: repeat(3,0fr);
+    gap: 40px;
+    grid-template-rows: repeat(1,0fr);  
+    padding-left: 248px;
+    padding-right: 248px;
+    padding-bottom: 50px;
+}
+
+.main-two-block1, .main-two-block2, .main-two-block3 {
+    text-align: center;
+    margin-top: 50px;
+    height: 300px;
+    width: 270px;
+    background-color: rgb(214, 232, 232);
+    border-radius: 7px;
+    padding: 20px; 
+
+}
+
+.main-three{
+    text-align: center;
+    background-color: aliceblue;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.main-four{
+    padding-left: 422px;
+    padding-right: 422px;
+}
+
+.main-four-block1 , .main-four-block2, .main-four-block3 {
+    margin-top: 40px;
+    padding: 20px;
+   /* padding-top: 10px;
+    padding-left: 30px;*/
+    background-color: rgb(185, 185, 185);
+   /* height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;*/
+    border-radius: 10px;
+}
+
+.main-four-block1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-four-block2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.flex-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.main-four-block1-icon{
+    width: 212px;
+    height: 212px;
+}
+
+.main-four-block2-icon{
+    width: 215px;
+    height: 210px;
+}
+
+.icon-one, .icon-two{
+    position: absolute;
+    width: 212px;
+    height: 212px;
+}
+.icon-one{
+    left: 20px;
+}
+
+.icon-two{
+    right: 30px;
+}
+
+footer{
+    background-color: beige;
+    display: flex;
+
+}
+
+/*  512  */
