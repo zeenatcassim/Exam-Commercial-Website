@@ -1,0 +1,17 @@
+
+.content-one, .content-two, .content-three{
+    padding-left: 110px;
+    padding: 80px;
+}  
+
+.content-one{
+    background-color: rgb(176, 176, 157);
+}
+
+.content-two{
+    background-color: rgb(228, 228, 218);
+}
+
+.content-three{
+    background-color: rgb(233, 233, 233);
+}
