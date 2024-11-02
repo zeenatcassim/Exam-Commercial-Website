@@ -1,0 +1,9 @@
+.content-one, .content-two{
+    padding-left: 110px;
+    padding: 80px;
+}  
+
+
+.content-one{
+    background-color: aliceblue;
+}
