@@ -7,3 +7,23 @@
 .content-one{
     background-color: aliceblue;
 }
+
+.api-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    gap: 40px;
+    grid-template-rows: repeat(1,0fr);  
+    padding-left: 248px;
+    padding-right: 248px;
+    padding-bottom: 50px;
+}
+
+.api-grid-one, .api-grid-two, .api-grid-three{
+    text-align: center;
+    margin-top: 50px;
+    height: 100px;
+    width: 270px;
+    background-color: rgb(214, 232, 232);
+    border-radius: 7px;
+    padding: 20px; 
+}
