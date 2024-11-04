@@ -1,8 +1,59 @@
 /*Navigation*/
-header{
+header nav{
     background-color: rgb(138, 150, 161);
     padding-bottom: 20px;
+    display: flex;
+    gap: 10px;
 }
+
+nav img {
+    padding-left: 75px;
+}
+
+nav{
+    padding-top: 20px;
+}
+
+.dropdown{
+    display: inline-flex;
+    position: relative;
+    padding-left: 65px;
+}
+
+.dropdown button{
+    width: 100px;
+    border: none;
+    background-color: rgb(138, 150, 161);
+    color: aliceblue;
+}
+
+.dropdown:hover button{
+    cursor: pointer;
+}
+
+.dropdown:hover .nav-content{
+    display: block;   
+}
+
+.nav-content{
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: azure;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-content button{
+    height: 70px;
+}
+
+.nav-content button:hover{
+    color: rgb(127, 214, 255);
+    cursor: pointer;
+}
+
+
 
 /*Scroll*/
 
@@ -20,7 +71,7 @@ header{
 }
 
 
-h1, .p-1{
+.h1-all, .p-1{
     padding-left: 110px;/*74+16+20*/
 }
 
