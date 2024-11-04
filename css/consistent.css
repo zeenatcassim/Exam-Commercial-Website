@@ -57,6 +57,20 @@ nav{
 
 /*Scroll*/
 
+.scroll{
+    position: relative;
+    /*move to corner*/
+    cursor: pointer;
+}
+
+.scroll-img{
+    width: 20px;
+    height: 20px;
+    transform: rotate(-90deg);
+    
+}
+
+
 /*Main for webpages: design, theory, about the API, data viz*/
 
 .grid-display{

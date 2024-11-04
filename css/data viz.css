@@ -1,0 +1,23 @@
+#bar-graph{
+    position: relative;
+}
+
+.tooltip{
+    position: relative;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    pointer-events: none;
+    transform: translate(15px, -30px);
+    transition: opacity 0.2s;
+}
+
+.bar{
+    fill: rgb(52, 52, 96);
+}
+
+.bar:hover{
+    fill: rgb(226, 203, 71);
+}
