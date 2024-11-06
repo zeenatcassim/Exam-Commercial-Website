@@ -1,23 +1,16 @@
-#bar-graph{
-    position: relative;
+.currency-dropdown{
+margin-top: 20px;
+margin-bottom: 20px;
+margin-left: 500px;
 }
 
 .tooltip{
-    position: relative;
+    margin-top: 30px;
+    margin-left: 950px;
+    background-color: rgba(62, 56, 56, 0.704);
+    color: white;
+    width: 150px;
+    padding: 15px;
+    border-radius: 5px;
     opacity: 0;
-    background-color: rgba(0, 0, 0, 0.75);
-    color: #fff;
-    padding: 8px;
-    border-radius: 4px;
-    pointer-events: none;
-    transform: translate(15px, -30px);
-    transition: opacity 0.2s;
-}
-
-.bar{
-    fill: rgb(52, 52, 96);
-}
-
-.bar:hover{
-    fill: rgb(226, 203, 71);
 }

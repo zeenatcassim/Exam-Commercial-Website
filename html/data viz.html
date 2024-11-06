@@ -26,15 +26,18 @@
       </section>
 
       <section>
-        <div>
-          <label for="currency">Select Your Currency:</label>
-          <select id="currency" onchange="updateGraph()"></select>
+        <div class="currency-dropdown">
+          <label for="currency-dropdown">Choose Your Currency Rate</label>
+          <select id="currency-dropdown">
+            <option value="">Select a Currency</option>
+          </select>
         </div>
 
-        <div id="bar-graph">
-          <svg id="bar-graph-svg"></svg>
+        <section class="graph-container">
+          <!-- Graph data visualisation-->
           <div class="tooltip"></div>
-        </div>
+          <svg id="bar-graph"></svg>
+        </section>
       </section>
 
       <section class="data-viz-two">
