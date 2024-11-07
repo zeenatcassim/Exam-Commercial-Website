@@ -59,15 +59,15 @@ nav{
 
 .scroll{
     position: relative;
-    /*move to corner*/
     cursor: pointer;
+    right: -1500px;
 }
 
 .scroll-img{
     width: 20px;
     height: 20px;
     transform: rotate(-90deg);
-    
+   
 }
 
 
