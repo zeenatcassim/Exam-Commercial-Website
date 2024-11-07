@@ -268,9 +268,7 @@ function displayChart(baseAmount, targetAmount, baseCurrency, targetCurrency){
         .attr('width', xScale.bandwidth())
         .attr('height', d => chartHeight - yScale(d.amount))
         .attr('fill', barColour)
-        .style('opacity', barColour);
-
-
+        
     g.selectAll(".text")
         .data(data)
         .enter()
@@ -281,20 +279,28 @@ function displayChart(baseAmount, targetAmount, baseCurrency, targetCurrency){
         .attr("text-anchor", "middle")
         .text(d => `${d.amount.toFixed(2)}`);
 
-    g.append("line")
-       .attr("x1", xScale(baseCurrency) + xScale.bandwidth())
-       .attr("y1", chartHeight / 2)
-       .attr("x2", xScale(targetCurrency))
-       .attr("y2", chartHeight / 2)
-       .attr("stroke", "black")
-       .attr("stroke-dasharray", "4");
+    g.selectAll(".hash-line")
+        .data(data)
+        .enter()
+        .append("line")
+        .attr("x1", d => xScale(d.category) + xScale.bandwidth()/2)
+        .attr("y1", d => yScale(d.amount))
+        .attr("x2", 0)
+        .attr("y2", d => yScale(d.amount))
+        .attr("stroke", "#ffffff")
+        .attr("stroke-dahsarray", "4");
 
-    g.append("text")
-       .attr("x", (xScale(baseCurrency) + xScale(targetCurrency)) / 2)
-       .attr("y", chartHeight / 2 - 10)
-       .attr("text-anchor", "middle")
-       .text(`Converted from ${baseCurrency} to ${targetCurrency}`);
+    const difference = targetAmount - baseAmount;
+    const differenceText = difference > 0 ? `+${difference.toFixed(2)} (Profit)` : `${difference.toFixed(2)} (Loss)`;
     
+    svg.append("text")
+        .attr("x", chartWidth / 2 + margin.left)
+        .attr("y", height - 7)
+        .attr("text-anchor", "middle")
+        .attr("font-size", "14px")
+        .attr("fill", difference > 0 ? "green" : "red")
+        .text(`Difference: ${differenceText}`);
+
     // Add x-axis
     g.append('g')
         .attr('transform', `translate(0,${chartHeight})`)
