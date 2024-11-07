@@ -40,18 +40,24 @@
         </section>
       </section>
 
-      <section class="data-viz-two">
-        <h2>Difference between your currency and another</h2>
-        <p>Choose another currency rate of your choice:</p>
-        <dropdown></dropdown>
-        <section class="bar-graph-compare">
-          <!--Section where bar graph two goes-->
-        </section>
-      </section>
+      <!--Conversion data visualisation-->
+      <section class="chart-container">
+        <h2>...</h2>
+        <p>It is...</p>
+        <section class="input-container">
+          <label for="amount">Enter your amount:</label>
+          <input type="number" id="amount" placeholder="Enter amount..." />
 
-      <section>
-        <h2>The history of your currency rate:</h2>
-        <!--Dynamic timeline, as user scrolls down, values and icons appear-->
+          <label for="base-currency">Currency of your choice:</label>
+          <select id="base-currency"></select>
+
+          <label for="target-currency">Currency you want to convert to:</label>
+          <select id="target-currency"></select>
+        </section>
+
+        <button id="convert-btn">Convert</button>
+        <p id="result">Converted amount:</p>
+        <svg id="chart" width="400" height="200"></svg>
       </section>
     </main>
 

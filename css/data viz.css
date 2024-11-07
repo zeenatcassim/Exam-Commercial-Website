@@ -1,7 +1,11 @@
+body{
+    background-color: rgb(192, 202, 202);
+}
+
 .currency-dropdown{
-margin-top: 20px;
-margin-bottom: 20px;
-margin-left: 500px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 500px;
 }
 
 .tooltip{
@@ -13,4 +17,31 @@ margin-left: 500px;
     padding: 15px;
     border-radius: 5px;
     opacity: 0;
+}
+
+.chart-container{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#result, #target-currency, #base-currency, #amount{
+    text-align: center;
+}
+
+#result{
+    margin: 10px;
+}
+
+.input-container{
+    text-align: center;
+}
+
+#convert-btn{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 700px;
+}
+
+#chart{
+    margin-left: 450px;
 }
