@@ -175,3 +175,19 @@ h1{
 .main-four button:hover{
     color: #178fd6;
 }
+
+.form{
+    padding: 50px;
+    background-color: #fffcf6;
+}
+
+.form button{
+    border: none;
+    background-color: #fffcf6;
+    color: #173387;
+}
+
+.form button:hover{
+    background-color: #173387;
+    color: #fffcf6;
+}

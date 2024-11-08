@@ -1,5 +1,50 @@
 //This contains all the content that is added on the website through JavaScript
 
+//Nav
+export const buttons = [
+    { id: "data-nav-btn", url: "./data viz.html" },
+    { id: "theory-nav-btn", url: "./theory.html" },
+    { id: "design-nav-btn", url: "./design.html" },
+    { id: "api-nav-btn", url: "./about.html" },
+    { id: "hm-nav-btn", url: "/Exam-Commercial-Website/index.html" }
+];
+
+export const homeButtons = [
+    { id: "data-nav-btn", url: "/Exam-Commercial-Website/html/data viz.html" },
+    { id: "theory-nav-btn", url: "/Exam-Commercial-Website/html/theory.html" },
+    { id: "design-nav-btn", url: "/Exam-Commercial-Website/html//design.html" },
+    { id: "api-nav-btn", url: "/Exam-Commercial-Website/html//about.html" },
+    { id: "hm-nav-btn", url: "/Exam-Commercial-Website/index.html" }
+];
+
+//Design:
+
+//Wireframe theory Sections
+export const wireframeSections =[
+    {
+        title: 'Mid-Fidelity Wireframes',
+        paragraph:'test',
+    },
+    {
+        title: 'High-Fidelity Wireframes',
+        paragraph:'test',
+    },
+];
+
+//wireframe images
+
+export const wireframeImages =[
+    {//../images/low-img-1.png
+      image1: '../images/Exam.png',
+      
+    },
+    {
+        image1: '../images/Exam.png',
+       
+    }
+];
+
+
 //Style Guide
 
 export const styleGuide = [
@@ -48,7 +93,7 @@ export const essayContents = [
         id:2,
         title:'Data Visualization Techniques:',
         p1:'The data visualization consists of a heatmap but instead of using a table, it uses a map of America to show the values of time for sunrise and sunset for an area. The map separates all the different areas by its counties to give specific values for an area. The counties are all local governments in the different states of America',
-        img1:'../images/img 1.png',
+        img1:'/images/img 1.png',
         p2:'Figure 1. Data Visualization that uses a heatmap over the region of the United States of America',
         p3:'This is extremely helpful since it gives detailed information about specific areas and the user can search for specific counties or hover over specific points of the map. ',
         img2:'../images/img 2.png',

@@ -1,5 +1,15 @@
+import { buttons } from "./content.js";
 
-/*
+buttons.forEach(button => {
+    const btnElement = document.getElementById(button.id);
+    if (btnElement) {
+        btnElement.addEventListener("click", function() {
+            window.location.href = button.url;
+        });
+    }
+});
+
+
 const url = 'https://data.fixer.io/api/latest?access_key=f156ee3163e52435edb8cdf84303eee1';
 const options = {
     method: 'GET'
@@ -338,7 +348,6 @@ function populateCurrencyDropdown() {
         });
 }
 
-// When page loads to populate the dropdown
 window.onload = populateCurrencyDropdown;
 
  function fetchHistoricalRates(startDate, endDate, baseCurrency, symbols) {
@@ -364,11 +373,11 @@ window.onload = populateCurrencyDropdown;
                     console.error(`Error fetching data for ${formattedDate}:`, data.error);
                 }
                 currentDate.setDate(currentDate.getDate() + 1);
-                return fetchNextDateRate(); // Recursively fetch the next date
+                return fetchNextDateRate(); 
             })
             .catch(error => {
                 console.error(`Failed to fetch data for ${formattedDate}:`, error);
-                return fetchNextDateRate(); // Continue even if error occurs
+                return fetchNextDateRate(); 
             });
     };
 
@@ -382,7 +391,11 @@ function drawRateComparisonChart(ratesData) {
 
     const svg = d3.select('#rate-chart');
 
-    const dates = Object.keys(ratesData).map(d => new Date(d));
+    const dates = Object.keys(ratesData)
+    .map(d => {
+        const date = new Date(d);
+        return isNaN(date) ? null : date;}).filter(d => d !== null);
+
     const rates = dates.map(date => ratesData[date.toISOString().split('T')[0]]['EUR']);
 
     const xScale = d3.scaleTime()
@@ -412,6 +425,9 @@ function drawRateComparisonChart(ratesData) {
     svg.append('g')
         .attr('transform', `translate(${margin.left}, 0)`)
         .call(d3.axisLeft(yScale));
+    
+   
+   
 }
 
 document.getElementById('generate-chart-button').addEventListener('click', () => {
@@ -431,14 +447,19 @@ document.getElementById('generate-chart-button').addEventListener('click', () =>
 
     const symbols = ['EUR'];
  
-    d3.select('#rate-chart').selectAll('*').remove(); // Clear existing SVG content
+    d3.select('#rate-chart').selectAll('*').remove(); 
+
+    document.getElementById('loading-message').style.display = 'block';
 
     fetchHistoricalRates(startDateInput, endDateInput, baseCurrency, symbols)
     .then(ratesData => {
+        document.getElementById('loading-message').style.display = 'none';
+
         drawRateComparisonChart(ratesData);
     })
     .catch(error => {
+        document.getElementById('loading-message').style.display = 'none';
+
         console.error('Error generating chart:', error);
     });
 });
-*/

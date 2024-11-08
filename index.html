@@ -17,37 +17,39 @@
     <header>
       <nav>
         <!--Navigation bar-->
-        <img
-          src="/Exam-Commercial-Website/images/Exam.png"
-          alt="Image of website's logo"
-        />
+        <button id="hm-nav-btn">
+          <img
+            src="/Exam-Commercial-Website/images/Exam.png"
+            alt="Image of website's logo"
+          />
+        </button>
         <div class="dropdown">
           <button>Data Visualizations</button>
           <section class="nav-content">
-            <button>Data viz 1</button>
-            <button>Data Viz 2</button>
-            <button>Data Viz 3</button>
+            <button id="data-nav-btn">Data viz 1</button>
+            <button id="data-nav-btn">Data Viz 2</button>
+            <button id="data-nav-btn">Data Viz 3</button>
           </section>
         </div>
         <div class="dropdown">
           <button>Theory</button>
           <section class="nav-content">
-            <button>Critical Essay</button>
-            <button>Essay (A2)</button>
-            <button>Workflow</button>
+            <button id="theory-nav-btn">Critical Essay</button>
+            <button id="theory-nav-btn">Essay (A2)</button>
+            <button id="theory-nav-btn">Workflow</button>
           </section>
         </div>
         <div class="dropdown">
           <button>Design</button>
           <section class="nav-content">
-            <button>Wireframes</button>
-            <button>Style Guide</button>
+            <button id="design-nav-btn">Wireframes</button>
+            <button id="design-nav-btn">Style Guide</button>
           </section>
         </div>
         <div class="dropdown">
           <button>The API</button>
           <section class="nav-content">
-            <button>Read More</button>
+            <button id="api-nav-btn">Read More</button>
           </section>
         </div>
       </nav>
@@ -91,9 +93,9 @@
           </section>
 
           <section class="main-two-block3">
-            <h3 class="p-name">Title</h3>
-            <img src="" alt="image of a ..." class="u-photo" />
-            <p class="p-summary">Content...</p>
+            <h3 class="p-name">Check the highs and lows</h3>
+            <img src="/Exam-Commercial-Website/images/freestock_73351369.jpg" alt="image of rising bars" class="u-photo" />
+            <p class="p-summary">Our historical tracker gives the recent ups and downs for your preferred currency</p>
             <button>Click here for more</button>
           </section>
         </section>
@@ -157,37 +159,28 @@
 
       </section>
 
-      <section>
+      <section class="form">
         <h3>Interested in getting regular updates?</h3>
         <p>Subscribe to our newsletter</p>
         <form method="post"> 
           <fieldset>
-          <label for="full-name">Enter your full name:
+         <ul> <label for="full-name">Enter your full name:
             <input type="text" name="full-name" id="full-name" required>
-          </label>
-          <label for="email">Enter your email: 
+          </label></ul>
+         <ul> <label for="email">Enter your email: 
             <input type="email" name="email" id="email" required>
-          </label>
-          <label for="password">Create your password: 
+          </label></ul>
+         <ul> <label for="password">Create your password: 
             <input type="password" id="password" name="password" pattern="[a-z0-5]{8,}" minlength="5" maxlength="15" required>
-          </label>
-          <label for="phone-number">Type in your phone number: 
+          </label></ul>
+         <ul><label for="phone-number">Type in your phone number: 
             <input type="number" name="phone-number" id="phone-number">
-          </label>          
-          <label for=""></label>  
+          </label> </ul>          
+         <button>Submit</button>
           </fieldset>
         </form>
-       
       </section>
 
-      <section class="scroll">
-        <a href="#top">
-          <img
-            src="/Exam-Commercial-Website/images/32213.png"
-            alt="image of an arrow"
-            class="scroll-img"
-        /></a>
-      </section>
     </main>
 
     <footer>
@@ -196,14 +189,20 @@
       </section>
 
       <section>
-        <h4 class="p-name">Contact us</h4>
-        <p class="p-summary">Content</p>
+        <h4 class="p-name">Attributions</h4>
+        <ul>   <a href="https://www.freestock.com/free-photos/woman-paying-bills-online-looking-happy-114106273">Image used under license from Freestock.com</a></ul>
+        <ul>    <a href="https://www.freestock.com/free-photos/black-graphs-currency-signs-698220">Image used under license from Freestock.com</a>+</ul>
+        <ul>  <a href="https://www.freestock.com/free-photos/illustration-directional-currency-sign-white-background-42636625">Image used under license from Freestock.com</a></ul>
+        
+      
       </section>
 
       <section>
         <h4 class="p-name">Attributions</h4>
-        <p class="p-summary">Content</p>
-      </section>
+      <ul><a href="https://www.freestock.com/free-photos/multi-ethnic-group-succesful-creative-business-431080024">Image used under license from Freestock.com</a></ul>
+      <ul><a href="https://www.freestock.com/free-photos/woman-carrying-books-head-trying-balance-60124597">Image used under license from Freestock.com</a></ul>
+    <ul><a href="https://www.freestock.com/free-photos/3d-business-man-growth-graph-isolated-73351369">Image used under license from Freestock.com</a></ul> 
+    </section>
 
       <section>
         <p>Copyright 2024</p>
@@ -211,5 +210,6 @@
     </footer>
 
     <!--js script-->
+    <script type="module" src="/Exam-Commercial-Website/js/hm.js"></script>
   </body>
 </html>

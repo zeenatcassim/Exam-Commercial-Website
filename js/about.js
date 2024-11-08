@@ -1,6 +1,6 @@
-import { homeButtons } from "./content.js";
+import { buttons } from "./content.js";
 
-homeButtons.forEach(button => {
+buttons.forEach(button => {
     const btnElement = document.getElementById(button.id);
     if (btnElement) {
         btnElement.addEventListener("click", function() {

@@ -10,52 +10,92 @@
     <link rel="stylesheet" href="/Exam-Commercial-Website/css/about.css" />
   </head>
   <body>
-    <header></header>
+    <header>
+      <nav>
+        <!--Navigation bar-->
+        <button id="hm-nav-btn">
+          <img
+            src="/Exam-Commercial-Website/images/Exam.png"
+            alt="Image of website's logo"
+          />
+        </button>
+        <div class="dropdown">
+          <button>Data Visualizations</button>
+          <section class="nav-content">
+            <button id="data-nav-btn">Data viz 1</button>
+            <button id="data-nav-btn">Data Viz 2</button>
+            <button id="data-nav-btn">Data Viz 3</button>
+          </section>
+        </div>
+        <div class="dropdown">
+          <button>Theory</button>
+          <section class="nav-content">
+            <button id="theory-nav-btn">Critical Essay</button>
+            <button id="theory-nav-btn">Essay (A2)</button>
+            <button id="theory-nav-btn">Workflow</button>
+          </section>
+        </div>
+        <div class="dropdown">
+          <button>Design</button>
+          <section class="nav-content">
+            <button id="design-nav-btn">Wireframes</button>
+            <button id="design-nav-btn">Style Guide</button>
+          </section>
+        </div>
+        <div class="dropdown">
+          <button>The API</button>
+          <section class="nav-content">
+            <button id="api-nav-btn">Read More</button>
+          </section>
+        </div>
+      </nav>
+    </header>
 
     <main>
       <section class="grid-display">
-        <h1 class="p-name h1-all">Heading 1</h1>
+        <h1 class="p-name h1-all">More about the API</h1>
         <p class="p-summary p-1">
-          Paragraph 1...This is Lorem ipsum dolor sit, amet consectetur
-          adipisicing elit. Non accusamus, eum incidunt praesentium repudiandae
-          labore laboriosam nulla voluptatum nam atque commodi eos alias sequi
-          mollitia debitis harum molestiae voluptate voluptatibus.
+          This section is dedicated to informing you all about the API that was
+          used to make this website
         </p>
-        <img src="" alt="Image of ..." class="img-1" />
-      </section>
-
-      <section class="table-of-contents">
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
       </section>
 
       <section class="content-one">
         <h2 class="p-name">What is the Fixer API?</h2>
-        <p class="p-summary">The Fixer API is a</p>
+        <p class="p-summary">
+          The Fixer API is an easy to use API for current and historical data
+          values
+        </p>
       </section>
 
       <section class="content-two">
         <h3 class="p-name">What you can do?</h3>
-        <p class="p-summary">Anyone can</p>
+        <p class="p-summary">
+          You can get the latest currency rates and historical current rates.
+          Their API endpoints allow you to convert from one currency to another,
+          use symbols to incorporate in your data and so much more!
+        </p>
 
         <h3 class="p-name">Joining is as simple as:</h3>
         <section class="api-grid">
           <section class="api-grid-one">
-            <h4 class="p-title">Title</h4>
-            <p class="p-summary">Content...</p>
-            <img src="" alt="image of ?" />
+            <h4 class="p-title">Add your details</h4>
+            <p class="p-summary">
+              Either use your gmail or create a new username
+            </p>
           </section>
 
           <section class="api-grid-two">
-            <h4 class="p-title">Title</h4>
-            <p class="p-summary">Content...</p>
-            <img src="" alt="image of?" />
+            <h4 class="p-title">Create a password</h4>
+            <p class="p-summary">Make sure to remember this when logging in</p>
           </section>
 
           <section class="api-grid-three">
-            <h4 class="p-title">Title</h4>
-            <p class="p-summary">Content...</p>
-            <img src="" alt="image of?" />
+            <h4 class="p-title">Documentation</h4>
+            <p class="p-summary">
+              Either read through the documentation or use the 3-step access
+              guide
+            </p>
           </section>
         </section>
       </section>
@@ -66,19 +106,48 @@
         <h3>Currency X</h3>
       </section>
 
-      <section class="two">
-        <h4 class="p-title">Contact us</h4>
-        <p class="p-street-address">Content</p>
+      <section>
+        <h4 class="p-name">Attributions</h4>
+        <ul>
+          <a
+            href="https://www.freestock.com/free-photos/woman-paying-bills-online-looking-happy-114106273"
+            >Image used under license from Freestock.com</a
+          >
+        </ul>
+        <ul>
+          <a
+            href="https://www.freestock.com/free-photos/black-graphs-currency-signs-698220"
+            >Image used under license from Freestock.com</a
+          >+
+        </ul>
+        <ul>
+          <a
+            href="https://www.freestock.com/free-photos/illustration-directional-currency-sign-white-background-42636625"
+            >Image used under license from Freestock.com</a
+          >
+        </ul>
       </section>
 
-      <section class="three">
+      <section>
         <h4 class="p-name">Attributions</h4>
-        <p class="p-summary">Content</p>
+        <ul>
+          <a
+            href="https://www.freestock.com/free-photos/multi-ethnic-group-succesful-creative-business-431080024"
+            >Image used under license from Freestock.com</a
+          >
+        </ul>
+        <ul>
+          <a
+            href="https://www.freestock.com/free-photos/woman-carrying-books-head-trying-balance-60124597"
+            >Image used under license from Freestock.com</a
+          >
+        </ul>
       </section>
 
       <section class="four">
         <p>Copyright 2024</p>
       </section>
     </footer>
+    <script type="module" src="/Exam-Commercial-Website/js/about.js"></script>
   </body>
 </html>

@@ -11,6 +11,29 @@ h1, h2, h3{
     font-weight: lighter;
 }
 
+
+.arrow-btn-img{
+    height: 20px;
+    width: 20px;
+   
+}
+
+.arrow-btn-img-left{
+    height: 20px;
+    width: 20px;
+    transform: rotate(-180deg);
+    
+}
+
+.arrow-btn{
+    border: none;
+    background-color: white;
+}
+
+.arrow-section{
+    margin-left: 530px;
+}
+
 .content-one, .content-two{
     padding-left: 110px;
     padding: 80px;
