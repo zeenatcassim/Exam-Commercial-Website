@@ -23,11 +23,11 @@ export const homeButtons = [
 export const wireframeSections =[
     {
         title: 'Mid-Fidelity Wireframes',
-        paragraph:'test',
+        paragraph:'These are the mid fidelity wireframes for the exam',
     },
     {
         title: 'High-Fidelity Wireframes',
-        paragraph:'test',
+        paragraph:'These are the high fidelity wireframes for the exam',
     },
 ];
 
@@ -35,8 +35,18 @@ export const wireframeSections =[
 
 export const wireframeImages =[
     {//../images/low-img-1.png
-      image1: '../images/Exam.png',
-      
+      image1: '../images/HM-1.png',
+      image2: '../images/HM-2.png',
+      image3: '../images/HM-3.png',
+      image4: '../images/T-1.png',
+      image5: '../images/T-2.png',
+      image6: '../images/T-3.png',
+      image7: '../images/D-1.png',
+      image8: '../images/D-2.png',
+      image9: '../images/D-3.png',
+      image10: '../images/A-1.png',
+      image11: '../images/A-2.png',
+    
     },
     {
         image1: '../images/Exam.png',

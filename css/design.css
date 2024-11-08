@@ -11,6 +11,18 @@ h1, h2, h3{
     font-weight: lighter;
 }
 
+.p-title{
+    padding-left: 150px;
+}
+
+.wireframe-container{
+    padding-left: 150px;
+}
+.dynamic-img{
+    height: 513px;
+    width: 716px;
+    border: #001b2e 1px solid;
+ }
 
 .arrow-btn-img{
     height: 20px;
