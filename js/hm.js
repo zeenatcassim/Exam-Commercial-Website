@@ -36,5 +36,5 @@ theoryInterBtn.addEventListener("click", function(){
     window.location.href = "html/theory.html";
 })
 apiInterBtn.addEventListener("click", function(){
-    window.location.href = "html/About.html";
+    window.location.href = "html/about.html";
 })
