@@ -177,7 +177,9 @@ h1{
 }
 
 .form{
+    margin-top: 50px;
     padding: 50px;
+    text-align: center;
     background-color: #fffcf6;
 }
 
@@ -190,4 +192,37 @@ h1{
 .form button:hover{
     background-color: #173387;
     color: #fffcf6;
+}
+
+/*Media queries*/
+@media screen and (400px <= width <= 1000px){
+    .main-two-display{
+        grid-template-columns: auto;
+        padding: 0;
+        margin: 0;
+        font-size: 12px;
+    }
+
+   .main-one {
+    padding: 0;
+    margin: 0;
+   }
+
+   .main-two{
+    padding-left: 0;
+   }
+
+  .text-content{
+    padding: 0;
+    margin: 0;
+    gap: 0;
+    font-size: 12px;
+  }
+   
+   .form{
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    text-align: left;
+   }
 }

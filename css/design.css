@@ -59,4 +59,9 @@ a{
     color: #173387;
 }
 
-
+@media screen and (min-width: 400px) and (max-width:1000px){
+    .dynamic-img{
+        height: 250px;
+        width:300px;
+     }
+    }
