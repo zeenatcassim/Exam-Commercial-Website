@@ -60,7 +60,7 @@ essayContents.forEach(content => {
 });
 
 //Critical Essay
-/*
+
 import { criticalEssayContents } from "./content.js";
 
 const criticalEssayContainer = document.querySelector('.critical-essay');
@@ -108,7 +108,7 @@ criticalEssayContents.forEach(content => {
 
     //adding section to essay container
     criticalEssayContainer.appendChild(section);
-});*/
+});
 
 //Workflow
 

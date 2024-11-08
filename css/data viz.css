@@ -92,3 +92,28 @@ h1, h2, h3{
     z-index: 10;
     white-space: nowrap;
 }
+
+@media screen and (min-width: 400px) and (max-width:1000px){
+ 
+  .bar-graph-container{
+    left: 0;
+  }
+
+  #bar-graph{
+    width: 450px;
+    height: 500px;
+  }
+  
+  #convert-btn{
+    margin-left: 0;
+  }
+
+  #chart{
+    margin-left: 0;
+}
+.line-graph-container {
+    margin-left: 0;
+}
+
+   
+}
