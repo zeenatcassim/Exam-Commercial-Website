@@ -21,3 +21,66 @@ h1, h2, h3{
     padding: 80px;
 }  
 
+
+.img1{
+    height: 450px;
+    width: 900px;
+}
+
+.img2{
+    height: 250px;
+    width: 500px;
+}
+
+.img6{
+    height: 250px;
+    width: 500px;
+}
+
+.img7{
+    height: 450px;
+    width: 700px;
+}
+/*Media queries*/
+@media screen and (400px <= width <= 1000px){
+    .main-one{
+        padding-left: 20px;
+    }
+
+    .main-two{
+        padding-left: 20px;
+    }
+
+    .main-three{
+        padding-left: 20px;
+    }
+
+    .main-four{
+        padding-left: 20px;
+    }
+
+    .img1{
+        height: 250px;
+        width: 500px;
+    }
+
+    .img2{
+        height: 150px;
+        width: 300px;
+    }
+
+    .img6{
+        height: 150px;
+        width: 300px; 
+    }
+    .img7{
+        height: 200px;
+        width: 350px;
+    }
+    image{
+        height: 150px;
+        width: 100px;
+    }
+ 
+}
+

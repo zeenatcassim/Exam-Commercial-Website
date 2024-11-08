@@ -93,7 +93,7 @@ export const essayContents = [
         id:2,
         title:'Data Visualization Techniques:',
         p1:'The data visualization consists of a heatmap but instead of using a table, it uses a map of America to show the values of time for sunrise and sunset for an area. The map separates all the different areas by its counties to give specific values for an area. The counties are all local governments in the different states of America',
-        img1:'/images/img 1.png',
+        img1:'../images/img 1.png',
         p2:'Figure 1. Data Visualization that uses a heatmap over the region of the United States of America',
         p3:'This is extremely helpful since it gives detailed information about specific areas and the user can search for specific counties or hover over specific points of the map. ',
         img2:'../images/img 2.png',
@@ -166,10 +166,9 @@ export const essayContents = [
 export const criticalEssayContents = [
     {
         id:1,
-        title:'Project Overview:',
-        p1:'The data journalism piece I have chosen is ‘Can You Make Winter Less Dark?’ (FiveThirtyEight, 2022). The authors are Ryan Best, Monica Potts, Kaleigh Rogers, Paroma Soni and Amelia Thomson-DeVeaux. The source of this data journalism comes from the website ‘FiveThirtyEight’ and it was published on 22 December 2022. ',
-        p2: 'The primary story of the data journalism is regarding the experience of using standard time and daylight-saving time in alternating months in America. Connected to this is a brief debate as to whether standard time or daylight-saving time should be permanently used, including the advantages and disadvantages that both have.  Before ending with a conclusion that discusses how and why, both daylight-saving time and standard time was introduced and the impact of changing clock settings to fit people’s schedules. ',
-
+        title:'',
+        p1:'',
+        p2: ' ',
     },
     {
         id:2,
@@ -251,20 +250,20 @@ export const workFlow = [
         p: 'Using the feedback, I received from assignment 3, I started working on the mid fidelity wireframes to start designing the html pages. After doing research on forex websites online, I took inspiration from their layouts, colour choices and conventions for the exam’s visual hierarchy, UI and navigation',
     },
     {
-        h3: 'Wireframes',
-        p: '',
-    },
-    {
-        h3: 'HTML and CSS for webpages',
-        p: '',
-    },
-    {
-        h3: 'JS to add content dynamically',
-        p: ' ',
+        h3: 'JS implementation',
+        p: 'Using most of the code from assignment 3, I started adding the required html elements to webpages so that once I add the content arrays in the content js file then it can display on the webpages',
     },
     {
         h3: 'Data Visualizations',
-        p: '',
+        p: 'I improved the two data visualizations from assignment 3. The user can now choose their currency that will get highlighted amongst other rates in the bar graph that shows the latest rates. The converter chart now displays if whether the user will make a profit or loss if they convert to another currency rate. The new data visualization for the exam lets the user choose two dates and a currency rate to see the fluctuations in the currency, which days did it have high value and which days it didn’t.',
+    },
+    {
+        h3: 'Essay and other theory work',
+        p: 'Using the wireframes and work I done so far, I started working on the write up for the style guide and for the essay before integrating it through JS on the website',
+    },
+    {
+        h3: 'Last minute styling',
+        p: 'Before submitting, I changed few aspects of the styling to make the website look aesthetically pleasing',
     },
    
 ]

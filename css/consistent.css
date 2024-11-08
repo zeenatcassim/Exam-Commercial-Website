@@ -160,3 +160,14 @@ footer{
 a{
     color: #edece8;
 }
+
+@media screen and (400px <= width <= 1000px){
+   .dropdown{
+    font-size: 12px;
+    padding: 0;
+   } 
+
+   footer{
+   row-gap: 0;
+   }
+}
