@@ -14,37 +14,37 @@
 
     <main>
       <section class="grid-display">
-        <h1 class="p-name h1-all">Theory Heading</h1>
+        <h1 class="p-name h1-all">Theory</h1>
         <p class="p-1 p-summary">
-          Paragraph one... Lorem ipsum dolor sit, amet consectetur adipisicing
-          elit. Reiciendis fugit quos officiis quas aliquam magnam sint minima
-          provident pariatur asperiores suscipit magni sunt quibusdam molestiae
-          maxime, aut perspiciatis soluta corrupti?
+          The theory section contains the essay from assignment 2, the critical
+          essay for the exam and the workflow for this website
         </p>
         <img src="" alt="image for theory webpage" class="img-1" />
       </section>
 
       <section class="table-of-contents">
-        <li><a href=""></a></li>
-        <li><a href=""></a></li>
+        <ul>
+          <a href="#content-one">Essay from Assignment 2</a>
+        </ul>
+        <ul>
+          <a href="#content-two">Critical Essay</a>
+        </ul>
+        <ul>
+          <a href="#content-three">Workflow</a>
+        </ul>
       </section>
 
-      <section class="content-one">
-        <h2 class="p-name">Heading Two</h2>
-        <h3 class="p-title">Sub-title</h3>
-        <p class="p-summary">Content...</p>
+      <section class="content-one" id="content-one">
+        <section class="essay-container"></section>
       </section>
 
-      <section class="content-two">
-        <h2 class="p-name">Heading Two</h2>
-        <h3 class="p-title">Sub-title</h3>
-        <p class="p-summary">Content...</p>
+      <section class="content-two" id="content-two">
+        <section class="critical-essay"></section>
       </section>
 
-      <section class="content-three">
-        <h2 class="p-name">Heading Two</h2>
-        <h3 class="p-title">Sub-title</h3>
-        <p class="p-summary">Content...</p>
+      <section class="content-three" id="content-three">
+        <h2>Workflow</h2>
+        <section class="workflow-container"></section>
       </section>
     </main>
 
@@ -67,5 +67,7 @@
         <p>Copyright 2024</p>
       </section>
     </footer>
+    <!--JS Script-->
+    <script type="module" src="/Exam-Commercial-Website/js/theory.js"></script>
   </body>
 </html>
