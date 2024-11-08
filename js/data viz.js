@@ -1,5 +1,5 @@
-/*
 
+/*
 const url = 'https://data.fixer.io/api/latest?access_key=f156ee3163e52435edb8cdf84303eee1';
 const options = {
     method: 'GET'
@@ -309,4 +309,136 @@ function displayChart(baseAmount, targetAmount, baseCurrency, targetCurrency){
     // Add y-axis
     g.append('g')
         .call(d3.axisLeft(yScale));
-}*/
+}
+
+function populateCurrencyDropdown() {
+    const url = 'https://data.fixer.io/api/symbols?access_key=f156ee3163e52435edb8cdf84303eee1';
+
+    
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                const symbols = data.symbols;
+                const dropdown = document.getElementById('base-currency-3');
+
+                // Populate the dropdown with currency options
+                for (const [code, name] of Object.entries(symbols)) {
+                    const option = document.createElement('option');
+                    option.value = code;
+                    option.textContent = `${code} - ${name}`;
+                    dropdown.appendChild(option);
+                }
+            } else {
+                console.error('Failed to fetch currency symbols:', data.error);
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching currency symbols:', error);
+        });
+}
+
+// When page loads to populate the dropdown
+window.onload = populateCurrencyDropdown;
+
+ function fetchHistoricalRates(startDate, endDate, baseCurrency, symbols) {
+    
+    let currentDate = new Date(startDate);
+    const endDateObj = new Date(endDate);
+    const ratesData = {};
+
+    const fetchNextDateRate = () => {
+        if (currentDate > endDateObj) {
+            return Promise.resolve(ratesData);
+        }
+
+        const formattedDate = currentDate.toISOString().split('T')[0];
+        const url = `https://data.fixer.io/api/${formattedDate}?access_key=f156ee3163e52435edb8cdf84303eee1&base=${baseCurrency}&symbols=${symbols.join(',')}`;
+
+        return fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    ratesData[formattedDate] = data.rates;
+                } else {
+                    console.error(`Error fetching data for ${formattedDate}:`, data.error);
+                }
+                currentDate.setDate(currentDate.getDate() + 1);
+                return fetchNextDateRate(); // Recursively fetch the next date
+            })
+            .catch(error => {
+                console.error(`Failed to fetch data for ${formattedDate}:`, error);
+                return fetchNextDateRate(); // Continue even if error occurs
+            });
+    };
+
+    return fetchNextDateRate();
+}
+
+function drawRateComparisonChart(ratesData) {
+    const svgWidth = 800;
+    const svgHeight = 400;
+    const margin = { top: 20, right: 30, bottom: 30, left: 50 };
+
+    const svg = d3.select('#rate-chart');
+
+    const dates = Object.keys(ratesData).map(d => new Date(d));
+    const rates = dates.map(date => ratesData[date.toISOString().split('T')[0]]['EUR']);
+
+    const xScale = d3.scaleTime()
+        .domain(d3.extent(dates))
+        .range([margin.left, svgWidth - margin.right]);
+
+    const yScale = d3.scaleLinear()
+        .domain([d3.min(rates), d3.max(rates)])
+        .range([svgHeight - margin.bottom, margin.top]);
+
+    const line = d3.line()
+        .x((d, i) => xScale(dates[i]))
+        .y((d, i) => yScale(rates[i]))
+        .curve(d3.curveMonotoneX);
+
+    svg.append('path')
+        .datum(rates)
+        .attr('fill', 'none')
+        .attr('stroke', 'steelblue')
+        .attr('stroke-width', 2)
+        .attr('d', line);
+
+    svg.append('g')
+        .attr('transform', `translate(0, ${svgHeight - margin.bottom})`)
+        .call(d3.axisBottom(xScale).ticks(10));
+
+    svg.append('g')
+        .attr('transform', `translate(${margin.left}, 0)`)
+        .call(d3.axisLeft(yScale));
+}
+
+document.getElementById('generate-chart-button').addEventListener('click', () => {
+    const startDateInput = document.getElementById('start-date').value;
+    const endDateInput = document.getElementById('end-date').value;
+    const baseCurrency = document.getElementById('base-currency').value;
+
+    if (!startDateInput || !endDateInput) {
+        alert('Please select both start and end dates.');
+        return;
+    }
+
+    if (!baseCurrency) {
+        alert('Please select a base currency.');
+        return;
+    }
+
+    const symbols = ['EUR'];
+ 
+    d3.select('#rate-chart').selectAll('*').remove(); // Clear existing SVG content
+
+    fetchHistoricalRates(startDateInput, endDateInput, baseCurrency, symbols)
+    .then(ratesData => {
+        drawRateComparisonChart(ratesData);
+    })
+    .catch(error => {
+        console.error('Error generating chart:', error);
+    });
+});
+*/

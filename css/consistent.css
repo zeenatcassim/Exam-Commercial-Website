@@ -58,7 +58,6 @@ nav{
 /*Scroll*/
 
 .scroll{
-    position: relative;
     cursor: pointer;
     right: -1500px;
 }
@@ -74,7 +73,7 @@ nav{
 /*Main for webpages: design, theory, about the API, data viz*/
 
 .grid-display{
-    background-color: rgb(209, 209, 209);
+    background-color: #ccdde8;
     padding-top: 50px;
     padding-bottom: 50px;
     display: grid;
